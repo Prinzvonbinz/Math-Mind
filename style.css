@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+#app {
+  width: 100%;
+  max-width: 480px;
+  background: #1e1e1e;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px #00ff90aa;
+}
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.screen {
+  display: none;
+}
+.screen.active {
+  display: block;
+}
+.menu-btn, button, input[type="number"], input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #00ff90;
+  color: #121212;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.menu-btn:hover, button:hover {
+  background: #00cc75;
+}
+input[type="number"], input[type="text"], input[type="password"] {
+  color: #121212;
+}
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+#games-list {
+  list-style: none;
+  padding: 0;
+}
+#games-list li {
+  margin: 8px 0;
+}
+#stats-content {
+  min-height: 150px;
+  margin-bottom: 20px;
+}
+.stats-password {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+  word-break: break-all;
+}
+#ch-history {
+  margin-top: 15px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  background: #222;
+  padding: 10px;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
