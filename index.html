@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MathMind</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- Login Screen -->
+  <section id="login-screen" class="screen active">
+    <h1>MathMind</h1>
+    <label for="password-input">Passwort eingeben:</label>
+    <input type="password" id="password-input" autocomplete="off" />
+    <button id="login-btn">Login</button>
+  </section>
+
+  <!-- Main Menu -->
+  <section id="main-menu" class="screen">
+    <h1>MathMind</h1>
+    <button class="menu-btn" id="play-btn">Spiele</button>
+    <button class="menu-btn" id="stats-btn">Statistiken</button>
+  </section>
+
+  <!-- Games Menu -->
+  <section id="games-menu" class="screen">
+    <h2>Spiele</h2>
+    <ul id="games-list">
+      <li><button class="game-select" data-game="codeHeist">Code Heist</button></li>
+      <li><button class="game-select" data-game="guessNumber">Guess the Number</button></li>
+      <li><button class="game-select" data-game="quickCalc">Quick Calc</button></li>
+      <li><button class="game-select" data-game="numberSequence">Number Sequence</button></li>
+      <li><button class="game-select" data-game="fastestFinger">Fastest Finger</button></li>
+    </ul>
+    <button id="games-back-btn">Zurück</button>
+  </section>
+
+  <!-- Statistics Screen -->
+  <section id="stats-screen" class="screen">
+    <h2>Statistiken</h2>
+    <div id="stats-content"></div>
+    <div class="stats-password">
+      <strong>Dein Passwort:</strong> <span id="stats-password"></span>
+    </div>
+    <button id="stats-back-btn">Zurück</button>
+  </section>
+
+  <!-- Game Containers -->
+  <!-- Code Heist -->
+  <section id="codeHeist-screen" class="screen">
+    <h2>Code Heist</h2>
+    <p>Errate die 5-stellige Zahl! Du hast 6 Versuche.</p>
+    <div id="ch-feedback"></div>
+    <input type="text" id="ch-input" maxlength="5" autocomplete="off" pattern="\d{5}" placeholder="5 Ziffern eingeben" />
+    <button id="ch-submit-btn">Prüfen</button>
+    <button id="ch-back-btn">Zurück</button>
+    <div id="ch-history"></div>
+  </section>
+
+  <!-- Guess the Number -->
+  <section id="guessNumber-screen" class="screen">
+    <h2>Guess the Number</h2>
+    <p>Rate eine Zahl zwischen 1 und 100.</p>
+    <input type="number" id="gn-input" min="1" max="100" autocomplete="off" />
+    <button id="gn-submit-btn">Raten</button>
+    <button id="gn-back-btn">Zurück</button>
+    <div id="gn-feedback"></div>
+    <div id="gn-attempts"></div>
+  </section>
+
+  <!-- Quick Calc -->
+  <section id="quickCalc-screen" class="screen">
+    <h2>Quick Calc</h2>
+    <p>Beantworte die Rechenaufgaben so schnell wie möglich.</p>
+    <div id="qc-question"></div>
+    <input type="number" id="qc-input" autocomplete="off" />
+    <button id="qc-submit-btn">Antworten</button>
+    <button id="qc-back-btn">Zurück</button>
+    <div id="qc-feedback"></div>
+    <div id="qc-score"></div>
+  </section>
+
+  <!-- Number Sequence -->
+  <section id="numberSequence-screen" class="screen">
+    <h2>Number Sequence</h2>
+    <p>Fülle die fehlende Zahl in der Folge aus.</p>
+    <div id="ns-sequence"></div>
+    <input type="number" id="ns-input" autocomplete="off" />
+    <button id="ns-submit-btn">Prüfen</button>
+    <button id="ns-back-btn">Zurück</button>
+    <div id="ns-feedback"></div>
+    <div id="ns-score"></div>
+  </section>
+
+  <!-- Fastest Finger -->
+  <section id="fastestFinger-screen" class="screen">
+    <h2>Fastest Finger</h2>
+    <p>Klicke so schnell wie möglich den Button!</p>
+    <button id="ff-click-btn">Klick mich!</button>
+    <button id="ff-back-btn">Zurück</button>
+    <div id="ff-feedback"></div>
+    <div id="ff-best-time"></div>
+  </section>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>
